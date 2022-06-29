@@ -41,3 +41,22 @@ string [] SortArray (string [] array)
 	}
 	return endArray;
 }
+
+void PrintArray (string [] array)
+{
+	if (array.Length == 0) Console.WriteLine("Массив не имеет значений!");
+		for (int i = 0; i < array.Length; i++)
+		{
+			Console.Write($"  [{array[i]}]");
+		}
+}
+
+FillArray(startArray);
+
+string [] endArray = SortArray(startArray);
+
+Console.WriteLine("\n Первоначальный массив:");
+PrintArray(startArray);
+
+Console.WriteLine("\n Массив значений с длинной (<) либо = (3) символа:");
+PrintArray(endArray);
